@@ -1,0 +1,90 @@
+body{
+    background-color: rgba(56,42,65,255);
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/* Style the navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color:#9f93a7;
+  }
+  
+  /* Navigation links */
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  /* The hamburger/menu icon */
+  .navbar a.icon {
+    display: none;
+  }
+  
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the menu icon (hamburger/menu) */
+  @media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* Add responsiveness - on small screens, display the navbar vertically instead of horizontally */
+  @media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+.responsive-image {
+    /* max-width: 100%; */
+    width: 700px;
+    height: auto;
+    display: block; /* Remove any default inline spacing */
+  }
+  
+  .image-container {
+    /* Optional: Styles that apply to the container on all devices */
+  }
+  
+  .responsive-image {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Default display */
+    margin-left: auto; /* Centering for block level */
+    margin-right: auto; /* Centering for block level */
+  }
+  
+  /* Styles for larger screens can go here */
+  /* Example: Align image to the left on larger screens */
+  @media (min-width: 769px) {
+    .responsive-image {
+      margin: 0; /* Reset margins */
+      display: block;
+    }
+  }
+  
+  /* Center the image only on small devices */
+  @media (max-width: 768px) {
+    .image-container {
+      text-align: center; /* Center inline or inline-block elements */
+    }
+    .responsive-image {
+      display: inline-block; /* Allows text-align center on the container to work */
+      width: 70%;
+    }
+  }
+  
