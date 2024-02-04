@@ -1,9 +1,13 @@
 body{
     background-color: rgba(56,42,65,255);
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
 *{
     padding: 0px;
     margin: 0px;
+    font-family: 'Comic Neue', cursive;
 }
 /* Style the navigation bar */
 .navbar {
@@ -58,8 +62,20 @@ body{
   
   .image-container {
     /* Optional: Styles that apply to the container on all devices */
+    display: flex;
+    flex-direction: row;
+    gap: 20px
+    ;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
   }
-  
+  .image-container p{
+    
+    margin: 50px;
+    font-style: bold;
+    
+  }
   .responsive-image {
     max-width: 100%; /* Make the image responsive */
     height: auto; /* Maintain aspect ratio */
@@ -80,11 +96,47 @@ body{
   /* Center the image only on small devices */
   @media (max-width: 768px) {
     .image-container {
+      display: block;
       text-align: center; /* Center inline or inline-block elements */
+      font-size: 12px;
+     
     }
     .responsive-image {
       display: inline-block; /* Allows text-align center on the container to work */
       width: 70%;
     }
   }
+
+  .neon-text {
+    color:#ffd2ff; /* Neon color */
+    font-size: 24px;
+    text-shadow:
+        0 0 5px #8b5791,
+        0 0 10px #8b5791,
+        0 0 20px #8b5791,
+        0 0 40px #8b5791,
+        0 0 80px #8b5791; /* Layered glow effect */
+}
+.responsive-paragraph {
+  font-size: 18px; /* Default font size */
+  padding: 8px;
+  margin: 0 15px;
+  max-width: 600px; /* Max width of the paragraph */
   
+}
+
+/* Styles for screens that are at least 768px wide */
+@media (min-width: 768px) {
+  .responsive-paragraph {
+      font-size: 18px; /* Larger font size for bigger screens */
+      padding: 30px;
+  }
+}
+
+/* Styles for screens that are at least 1024px wide */
+@media (min-width: 1024px) {
+  .responsive-paragraph {
+      font-size: 18px; /* Even larger font size for desktops */
+      padding: 40px;
+  }
+}
